@@ -1,3 +1,73 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+.font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Add these styles to your main CSS file */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-container .tooltip-text {
+  visibility: hidden;
+  width: auto;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the image */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-container .tooltip-text::after {
+  content: '';
+  position: absolute;
+  top: 100%; /* Bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px  rgb(24, 39, 59) inset !important;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill{
+  -webkit-text-fill-color: white !important;
+}
+
+
 .App {
   text-align: center;
 }
@@ -27,6 +97,63 @@
 .App-link {
   color: #61dafb;
 }
+.loading-page {
+  background: black;
+  background: -webkit-linear-gradient(to left, #000000, #1a1919); 
+  background: linear-gradient(to left, #000000, #1a1919); 
+}
+
+#svg {
+  height: 150px;
+  width: 150px;
+  stroke: rgb(253, 175, 31);
+  fill-opacity: 0;
+  stroke-width: 3px;
+  stroke-dasharray: 4500;
+  animation: draw 4s ease;
+}
+
+.name-container {
+  height: auto;
+  overflow: hidden;
+}
+
+.logo-name {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: transparent; /* Make the text color transparent */
+  -webkit-text-stroke: 1px rgb(253, 175, 31); /* Add a white outline around each letter */
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideIn 2s ease forwards;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 4500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  75% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 
 @keyframes App-logo-spin {
   from {
@@ -36,3 +163,5 @@
     transform: rotate(360deg);
   }
 }
+
+
