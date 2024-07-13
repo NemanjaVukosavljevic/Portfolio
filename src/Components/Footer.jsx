@@ -7,13 +7,13 @@ import ScrollLink from './ScrollLink';
 
 const Footer = () => {
   return (
-    <footer className="bg-black group">
+    <footer className="bg-black">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           {/* Logo Column */}
           <div className="mb-6 md:mb-0 flex md:items-center cursor-pointer">
             <ScrollLink to="home">
-              <img src={logo} className="h-[6rem] w-[10rem] my-5 md:my-0 me-3" alt="Nemanja Vukosavljevic Logo" />
+              <img src={logo} className="h-[4rem] w-[6rem] md:h-[6rem] md:w-[10rem] my-5 md:my-0 me-3" alt="Nemanja Vukosavljevic Logo" />
             </ScrollLink>
           </div>
           {/* Navigation Links Column */}
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
         <hr className="my-6 sm:mx-auto border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400 group-hover:text-orange-500 transition-colors duration-300">© 2024 Nemanja Vukosavljevic. All Rights Reserved.</span>
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400  transition-colors duration-300">© 2024 Nemanja Vukosavljevic. All Rights Reserved.</span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a href="https://www.linkedin.com/in/nemanja-vukosavljevi%C4%87-a10261273/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 dark:hover:text-white cursor-pointer">
               <img src={linkedinLogo} alt="LinkedIn" className="w-4 h-4 md:w-10 md:h-10" />

@@ -47,7 +47,7 @@ const HeroSection = () => {
         />
         <div className='absolute inset-0 bg-black bg-opacity-50'></div>
         </div>
-        <div className='relative w-full h-[60vh] md:h-full flex flex-col justify-center items-center p-8 '>
+        <div className='relative w-full h-[60vh] md:mt-[7rem] lg:mt-[5rem] md:h-full flex flex-col justify-center items-center p-8 '>
             <div className="flex flex-col gap-5 md:gap-10 text-5xl md:text-[6rem] font-extrabold text-white text-center">
                 <h1 className='sequenceText'>
                 INNOVATION
@@ -59,16 +59,13 @@ const HeroSection = () => {
                 CODE
                 </h1>
             </div>
-            {/* <p className="sequenceText mt-4 md:w-[50%] text-2xl text-center text-white">
-                Specializing in React web development, I turn your ideas into interactive and engaging web experiences. With a strong foundation in HTML, CSS/Tailwind, and the Fireship database, I build applications that are both user-centric and technically robust.
-            </p> */}
 
             <div className='sequenceText flex gap-2 md:gap-10 mt-[4rem]'>
                 <ScrollLink to="projects">
-                  <button className=' p-5 text-xl text-white border border-orange-500 rounded-md hover:border-white hover:text-orange-500 transition-colors duration-150'>My Projects</button>
+                  <button className=' p-5 text-base md:text-xl text-white border border-orange-500 rounded-md hover:border-white hover:text-orange-500 transition-colors duration-150'>My Projects</button>
                 </ScrollLink>
                 <ScrollLink to="contact">
-                  <button className=' p-5 text-xl text-white border border-orange-500 rounded-md hover:border-white hover:text-orange-500 transition-colors duration-150'>Contact Me</button>
+                  <button className=' p-5 text-base md:text-xl text-white border border-orange-500 rounded-md hover:border-white hover:text-orange-500 transition-colors duration-150'>Contact Me</button>
                 </ScrollLink>
             </div>
         </div>

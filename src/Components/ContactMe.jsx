@@ -41,13 +41,13 @@ const ContactMe = () => {
 
   return (
     <section id="contact" className="py-20 bg-[#28282B] pt-[8rem] md:pt-[9rem] text-white">
-      <div className="container mx-auto px-6 md:px-12 lg:px-24">
+      <div className="container  mx-auto px-6 md:px-12 lg:px-24">
         {/* Contact Form Section */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-10">Contact Me</h2>
           <div className="flex flex-col md:flex-row justify-center items-center gap-10">
             {/* Contact Form */}
-            <form className="w-full md:w-1/2 bg-gray-900 p-8 rounded-lg shadow-lg" onSubmit={onSubmit}>
+            <form className="w-full lg:w-3/5 bg-gray-900 p-8 rounded-lg shadow-lg" onSubmit={onSubmit}>
               <div className='mb-6'>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
                 <input 
@@ -100,7 +100,7 @@ const ContactMe = () => {
         <div>
           <h2 className="text-4xl font-bold text-center mb-10">Check out my socials</h2>
           <p className="text-lg text-center mb-12">Connect with me on LinkedIn and GitHub</p>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-10">
+          <div className="flex flex-row justify-center items-center gap-10">
             {/* LinkedIn Link */}
             <a href="https://www.linkedin.com/in/nemanja-vukosavljevi%C4%87-a10261273/" target="_blank" rel="noopener noreferrer" className="hover:opacity-75 transition-opacity duration-300">
               <img src={linkedinLogo} alt="LinkedIn" className="w-16 h-16 md:w-20 md:h-20" />

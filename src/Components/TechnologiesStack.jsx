@@ -5,7 +5,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import htmlImg from '../assets/html.png';
 import cssImg from '../assets/css.png';
 import firebaseImg from '../assets/firebase.png';
-import githubImg from '../assets/github.png';
 import jsImg from '../assets/js.png';
 import pythonImg from '../assets/python.png';
 import reactImg from '../assets/react.png';
@@ -77,7 +76,6 @@ const TechnologiesStack = () => {
         start: 'top top',
         end: 'bottom center',
         scrub: true,
-        // markers: true,
       });
 
       techRefs.current.forEach((techRef) => {
@@ -94,14 +92,13 @@ const TechnologiesStack = () => {
               start: 'top bottom',
               end: 'top center',
               scrub: true,
-              // markers: true,
             },
           }
         );
       });
     });
 
-        mm.add("(max-width: 768px)", () => {
+        mm.add("(max-width: 1023px)", () => {
 
         techRefs.current.forEach((techRef) => {
             gsap.fromTo(
@@ -117,7 +114,6 @@ const TechnologiesStack = () => {
                   start: 'top bottom',
                   end: 'top center',
                   scrub: true,
-                  // markers: true,
                 },
               }
             );
@@ -129,10 +125,10 @@ const TechnologiesStack = () => {
   }, []);
 
   return (
-    <section id="vertical" ref={sectionRef} className="p-6 lg:p-0 h-auto overflow-hidden lg:h-[200vh] bg-black w-full md:py-12">
+    <section id="vertical" ref={sectionRef} className="py-0 px-6 md:p-6 lg:p-0 h-auto overflow-hidden lg:h-[200vh] bg-black w-full md:py-12">
       <div className="h-full mx-auto flex flex-col lg:flex-row justify-center items-start">
         <div ref={colLeftRef} className="h-full w-full lg:w-1/2">
-          <h2 className="vertical__heading lg:mt-[7rem] flex flex-col text-white text-3xl lg:text-6xl font-black uppercase border-l-4 border-orange-500 p-6">
+          <h2 className="vertical__heading md:mb-20 lg:mt-[7rem] flex flex-col text-white text-3xl md:text-5xl lg:text-6xl font-black uppercase border-l-4 border-orange-500 p-6">
             <span>Modern</span>
             <span>Technologies <span className='text-orange-500'>&</span></span>
             <span>Animations</span>
