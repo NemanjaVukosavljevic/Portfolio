@@ -18,9 +18,7 @@ const Navbar = () => {
     const navBarDesktopText = gsap.utils.toArray('.navdekstoptext');
 
     mm.add("(min-width: 800px)", () => {
-        // clear the timeline in case someone changes the device view
         timeline.clear();
-        // desktop setup code here...
         timeline
         .fromTo(navbarRef.current, { opacity: 0 }, { duration: 1, opacity: 1 })
         .fromTo(navBarDesktopText, { opacity: 0 }, { duration: 0.5, opacity: 1, stagger: 0.5 });
@@ -28,9 +26,7 @@ const Navbar = () => {
     
     
     mm.add("(max-width: 799px)", () => {
-        // clear the timeline in case someone changes the device view
         timeline.clear();
-        // mobile setup code here...timeline
         timeline
         .fromTo(navbarRef.current, { opacity: 0 }, { duration: 1, opacity: 1 })
     });
